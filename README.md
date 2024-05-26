@@ -1,3 +1,9 @@
+# Updated 2024-05-26
+
+This project seems somewhat dead, so I forked it.
+
+Use this image for your PI and it will build [https://downloads.raspberrypi.org/raspios_oldstable_lite_armhf/images/raspios_oldstable_lite_armhf-2023-05-03/2023-05-03-raspios-buster-armhf-lite.img.xz]
+
 # Camplayer - IP Camera viewer for the Raspberry Pi
 Use your Raspberry Pi as advanced IP camera viewer.
 The list of supported IP cameras is endless as Camplayer makes use of the RTSP and HTTP protocols for streaming.
