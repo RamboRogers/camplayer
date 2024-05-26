@@ -1,6 +1,6 @@
 # Updated 2024-05-26
 
-This project seems somewhat dead, so I forked it.
+This project seems somewhat dead, so I'm updating this fork with the details to keep it running.
 
 Use this image for your PI and it will build [https://downloads.raspberrypi.org/raspios_oldstable_lite_armhf/images/raspios_oldstable_lite_armhf-2023-05-03/2023-05-03-raspios-buster-armhf-lite.img.xz]
 
@@ -12,14 +12,6 @@ Especially the RTSP protocol is supported by nearly all big brands out there.
  A picture is worth a thousand words.  
 
  ![Camplayer 2x2 grid](./screenshots/camplayer_nolink.png)
-
-## Website
-[https://www.rpi-camplayer.com/](https://www.rpi-camplayer.com/)
-
-## Donate
-Please consider a donation if you like this software or want to support its ongoing development.
-
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZJMX4ZWEUCP22&source=url" target="_blank" rel="nofollow"><img src="https://www.paypal.com/en_US/i/btn/x-click-but21.gif" alt="" /></a>
 
 ## Features
 * MPEG2, H264, MJPEG and experimental HEVC support (see support matrix).
@@ -94,9 +86,7 @@ Therefore, please don't use this software if security is critical for you.
 I take no responsibility for leaked footage, leaked credentials, hacked cameras etc., you have been warned!
 
 ## Installation
-
-The instruction below assume you are running a recent Raspberry Pi OS Lite build.  
-If you are interested in a plug & play system with some additional features, check out [https://www.rpi-camplayer.com/](https://www.rpi-camplayer.com/)
+Make sure to use this legacy image: [https://downloads.raspberrypi.org/raspios_oldstable_lite_armhf/images/raspios_oldstable_lite_armhf-2023-05-03/]
 
 Add the following lines to '/boot/config.txt':  
 ```
@@ -117,7 +107,7 @@ sudo apt-get install git
 
 Get the source code and check it out in the current directory:  
 ```
-git clone -b Camplayer_1.0 https://github.com/raspicamplayer/camplayer.git
+git clone https://github.com/RamboRogers/camplayer
 ```
 
 Install camplayer by running the install script:  
@@ -146,14 +136,6 @@ sudo systemctl stop camplayer.service
 ```
 or  
 Press "q" key.
-
-## Experimental HEVC/H265 support
-You have to install an experimental VLC media player version,  
-please follow the instructions of the following thread.  
-https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=257395  
-  
-It is important to note that VLC does not support windowed playback at the moment, so you can not create a grid layout of HEVC/H265 streams.
-Once VLC supports this, I will probably drop OMXplayer support and rewrite the windowmanager code in a less hackish way.
 
 ## Configuration
 ### Getting started 
@@ -304,10 +286,3 @@ numeric key 0       Switch from single view to grid view mode and unpause rotati
 escape              Switch from single view to grid view mode and unpause rotation.
 letter 'q'          Quit camplayer.
 ```
-
-## Roadmap
-### Camplayer 2
-* Improve VLC and drop OMXplayer support, drop code hacks introduced to support them both.
-* Proper windowed H265/HEVC playback, related to previous point.
-* PTZ support by calling external scripts.
-* Proper audio support.
