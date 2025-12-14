@@ -4,6 +4,26 @@ This project seems somewhat dead, so I'm updating this fork with the details to 
 
 Use this image for your PI and it will build [https://downloads.raspberrypi.org/raspios_oldstable_lite_armhf/images/raspios_oldstable_lite_armhf-2023-05-03/2023-05-03-raspios-buster-armhf-lite.img.xz]
 
+# Update 2025-12-13
+
+sudo vi /etc/apt/sources.list
+
+Comment out any existing lines and or replace it with:
+
+```
+deb http://legacy.raspbian.org/raspbian/ buster main contrib non-free rpi
+deb http://archive.raspberrypi.org/debian/ buster main
+```
+
+And then run:
+
+```
+sudo apt-get clean
+sudo rm -rf /var/lib/apt/lists/*
+sudo apt-get update --allow-releaseinfo-change
+sudo apt-get install -y git
+```
+
 # Camplayer - IP Camera viewer for the Raspberry Pi
 Use your Raspberry Pi as advanced IP camera viewer.
 The list of supported IP cameras is endless as Camplayer makes use of the RTSP and HTTP protocols for streaming.
